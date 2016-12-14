@@ -22,20 +22,20 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = filter(None, posts_replied_to)
 
-subreddit = r.get_subreddit("septicrevo")
+subreddit = r.get_subreddit("bigbangtheory")
 for submission in subreddit.get_hot(limit=5):
     if submission.id not in posts_replied_to:
         if re.search("spoilers", submission.title, re.IGNORECASE):
             submission.add_comment('I noticed your post contains content that could be considered a "spoiler". Please add the Spoiler flair to your post!')
-            print("Bot replying to : ", submission.title)
+            print("TBBT Spoiler Bot replying to : ", submission.title)
             posts_replied_to.append(submission.id)
         elif re.search("photos", submission.title, re.IGNORECASE):
             submission.add_comment('I noticed your post contains content that could be considered a "spoiler". Please add the Spoiler flair to your post!')
-            print("Bot replying to : ", submission.title)
+            print("TBBT Spoiler Bot replying to : ", submission.title)
             posts_replied_to.append(submission.id)
         elif re.search("promo", submission.title, re.IGNORECASE):
             submission.add_comment('I noticed your post contains content that could be considered a "spoiler". Please add the Spoiler flair to your post!')
-            print("Bot replying to : ", submission.title)
+            print("TBBT Spoiler Bot replying to : ", submission.title)
             posts_replied_to.append(submission.id)
 
 with open("posts_replied_to.txt", "w") as f:
