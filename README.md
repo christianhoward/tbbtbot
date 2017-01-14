@@ -1,4 +1,4 @@
-# TBBTbot Tutorial
+# TBBTbot
 
 A reddit bot built using Python3 and the Python Reddit API Wrapper package.
 
